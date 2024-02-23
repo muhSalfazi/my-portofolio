@@ -209,10 +209,10 @@ document.addEventListener('click', function(e) {
    * Portfolio details slider
    */
   new Swiper('.portfolio-details-slider', {
-    speed: 400,
+    speed: 100,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 6000,
       disableOnInteraction: false
     },
     pagination: {
@@ -267,7 +267,7 @@ document.addEventListener('click', function(e) {
   
   window.addEventListener('load', () => {
     AOS.init({
-      duration: 1800,
+      duration: 1900,
       easing: 'ease-in-out',
       once: false,
       mirror: false
