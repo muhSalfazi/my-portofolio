@@ -1,8 +1,4 @@
-# UI Portofolio Saya
 
-![Screenshot Web](https://github.com/salfazi/my-portofolio/assets/121502387/0bbef95f-2780-461c-86f3-3b39254a104e)
-
-Ini adalah UI Portofolio saya yang menampilkan berbagai proyek dan keterampilan yang saya miliki. Dibuat dengan tujuan untuk memperlihatkan portofolio profesional saya kepada dunia.
 
 ## Fitur Utama
 
@@ -16,3 +12,6 @@ Ini adalah UI Portofolio saya yang menampilkan berbagai proyek dan keterampilan 
 
 Anda dapat mengakses UI Portofolio ini dengan mengunjungi [tautan ini](https://muhsalfazi-portofolio.netlify.app/).
 
+## Lisensi
+
+Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE). Untuk detail lebih lanjut, silakan lihat file [LICENSE](LICENSE).
