@@ -88,18 +88,54 @@
 
 
   }
+  
+  .image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 5px rgba(34, 33, 33, 0.1)
+}
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #1d7bf7, #e5e5e5);
+  opacity: 0.1; /* Mengurangi opacity agar lebih terang */
+  transition: opacity 0.4s ease;
+}
 
-  <blade keyframes|%20slideInUp%20%7B%0D>from {
-    transform: translateY(100%);
-  }
+.image-container:hover::before {
+  opacity: 0.5; /* Mengurangi opacity saat dihover */
+}
 
-  to {
-    transform: translateY(0);
-  }
-  }
- 
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 3px solid #b4e3fc; 
+  border-radius: 10px;
+  pointer-events: none;
+}
+
 </style>
-</head>
 
 <body>
   <div class="loading-overlay" id="loading-overlay">
@@ -172,12 +208,17 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/foto_baru.jpg" class="img-fluid" alt="">
+            <div class="image-container">
+              <img src="assets/img/foto_baru.jpg" class="img-fluid" alt="">
+            </div>
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Muhamad Salman Fauzi</h3>
             <p class="fst-italic">
-             <p>Saya adalah mahasiswa di Universitas Buana Perjuangan Karawang, saat ini berada di semester 5. Saya memiliki minat dan keahlian dalam pengembangan web, terutama pada sisi backend. Saya sangat tertarik dalam menciptakan pengalaman pengguna yang menarik dan intuitif. Saya yakin bahwa kombinasi antara desain yang estetis dan fungsional adalah kunci untuk menciptakan produk yang luar biasa.</p>
+              <p>Saya adalah mahasiswa di Universitas Buana Perjuangan Karawang, saat ini berada di semester 5. Saya
+                memiliki minat dan keahlian dalam pengembangan web, terutama pada sisi backend. Saya sangat tertarik
+                dalam menciptakan pengalaman pengguna yang menarik dan intuitif. Saya yakin bahwa kombinasi antara
+                desain yang estetis dan fungsional adalah kunci untuk menciptakan produk yang luar biasa.</p>
 
 
 
@@ -187,15 +228,16 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>05 DES 2003</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Kota:</strong> <span>Karawang, Jawa Barat</span></li>
-                  <li><i class="bi bi-chevron-right"></i> 
-                    <strong>Email:</strong> 
+                  <li><i class="bi bi-chevron-right"></i>
+                    <strong>Email:</strong>
                     <span>
-                        <a href="mailto:if22.muhamadfauzi@mhs.ubpkarawang.ac.id?subject=Subjek Pesan&body=Isi Pesan" style="word-wrap: break-word; display: inline-block; max-width: 90%; ">
-                          if22.muhamadfauzi@mhs.ubpkarawang.ac.id
-                        </a>
+                      <a href="mailto:if22.muhamadfauzi@mhs.ubpkarawang.ac.id?subject=Subjek Pesan&body=Isi Pesan"
+                        style="word-wrap: break-word; display: inline-block; max-width: 90%; ">
+                        if22.muhamadfauzi@mhs.ubpkarawang.ac.id
+                      </a>
                     </span>
-                </li>
-                
+                  </li>
+
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -208,7 +250,8 @@
 
             </div>
           </div>
-         
+        </div>
+      </div>
     </section>
 
     <!-- End About Section -->
@@ -255,7 +298,7 @@
 
 
           </div>
-          
+
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
@@ -287,13 +330,13 @@
         </div>
 
       </div>
-      
+
     </section>
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f5f8fd" fill-opacity="1"
-                d="M0,128L30,138.7C60,149,120,171,180,154.7C240,139,300,85,360,80C420,75,480,117,540,149.3C600,181,660,203,720,186.7C780,171,840,117,900,80C960,43,1020,21,1080,26.7C1140,32,1200,64,1260,64C1320,64,1380,32,1410,16L1440,0L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
-            </path>
-        </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#f5f8fd" fill-opacity="1"
+        d="M0,128L30,138.7C60,149,120,171,180,154.7C240,139,300,85,360,80C420,75,480,117,540,149.3C600,181,660,203,720,186.7C780,171,840,117,900,80C960,43,1020,21,1080,26.7C1140,32,1200,64,1260,64C1320,64,1380,32,1410,16L1440,0L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+      </path>
+    </svg>
 
     <!-- End Skills Section -->
 
@@ -312,10 +355,15 @@
             <h3 class="resume-title">Sumary</h3>
             <div class="resume-item pb-0">
               <h4>M.Salman Fauzi</h4>
-              <p><em>Muhamad Salman Fauzi 
-              lahir di Karawang pada 05 Desember 2003 dan saat ini merupakan mahasiswa semester 5 di Universitas Buana Perjuangan Karawang. Sebagai seorang Muslim, saya bangga dengan identitas dan nilai-nilai agama saya. Dengan tinggi 165 cm dan berat 50 kg, saya sangat antusias dalam mengejar aspirasi saya, khususnya dalam bidang pengembangan web dengan fokus pada sisi backend. Saya percaya bahwa kombinasi antara desain basis data yang baik, API yang efisien, dan fungsi yang kuat merupakan kunci untuk menciptakan produk yang luar biasa.
+              <p><em>Muhamad Salman Fauzi
+                  lahir di Karawang pada 05 Desember 2003 dan saat ini merupakan mahasiswa semester 5 di Universitas
+                  Buana Perjuangan Karawang. Sebagai seorang Muslim, saya bangga dengan identitas dan nilai-nilai agama
+                  saya. Dengan tinggi 165 cm dan berat 50 kg, saya sangat antusias dalam mengejar aspirasi saya,
+                  khususnya dalam bidang pengembangan web dengan fokus pada sisi backend. Saya percaya bahwa kombinasi
+                  antara desain basis data yang baik, API yang efisien, dan fungsi yang kuat merupakan kunci untuk
+                  menciptakan produk yang luar biasa.
 
-</em></p>
+                </em></p>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -362,8 +410,8 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
- <!-- website -->
-           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <!-- website -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
               <img src="assets/img/mjb-1.png" class="img-fluid" alt="website perpustakaan" />
               <div class="portfolio-links">
@@ -397,7 +445,7 @@
             </div>
           </div>
           <!-- end web 1 -->
-           <!-- website 4 -->
+          <!-- website 4 -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
               <img src="assets/img/perpus-2.png" class="img-fluid" alt="website perpustakaan" />
@@ -500,7 +548,7 @@
             </div>
           </div>
           <!-- end sertifikat 6 -->
-         
+
           <!-- sertif laravel -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
@@ -512,7 +560,7 @@
             </div>
           </div>
           <!-- end -->
-          
+
         </div>
 
       </div>
@@ -572,8 +620,8 @@
       });
     });
   </script>
-  
- 
+
+
 
 
 
