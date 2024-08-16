@@ -10,7 +10,7 @@
 
 ## Cara Mengakses
 
-Anda dapat mengakses UI Portofolio ini dengan mengunjungi [tautan ini](https://muhsalfazi-portofolio.netlify.app/).
+Anda dapat mengakses UI Portofolio ini dengan mengunjungi [tautan ini]([(https://muhsalfazi.my.id/)).
 
 ## Lisensi
 
